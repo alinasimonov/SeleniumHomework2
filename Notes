@@ -1,0 +1,35 @@
+Xpath                                                   <html>
+                                                        <body>
+1.Absolute Xpath                                        <input>
+/html/body/p                                            <p>hello</p
+   Reason for not being recommended                     </body>
+   1.The path may change if any change is made          </html>
+   in the document
+   2.it is too long
+2.Relative Xpath
+  //tagname[@attribute='value']
+  hey get me the tagname""which has atribute""whose value is""
+
+ //tagname[@attribute='value'] -  attribute -I can use any attributes provided that it doesn't have numbers,spaces and is unique enough.
+ //tagname[text()='value'] - text - The element must have text.
+ Contain Method-The benefit is that we can use partial value of attribute or text this is helpful when we have no other option
+ and all the available attributes have either digits or spaces
+ //tagname[contains(@name,'value')] - Contains method for attribute
+ //tagname[contains(text(),'value')] - Contains method for text
+
+ <input href="www.hrec.com0012345">
+ //input[contains(@href,'www.hrec.com')]
+
+ Starts With- Similar to contains method, the only difference is that we must use the starting of the text or attributes value,we cant just use from anywhere
+ //tagname[starts=with(@attribute,'value')]
+ //tagname[starts=with(text(),'value')]
+ <input href= pinpng097535r266">
+ //tagname[starts=
+
+
+Indexing- Should be last resort when we have no other option to select the element uniquely
+(xpath)[index]
+//tagname[(@attribute,'value'])[index]
+
+Use of and operator-to specify more then one condition for our element,to locate it uniquely
+  //tagname[@attribute='value' and @attribute='value]
